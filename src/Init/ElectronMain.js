@@ -21,11 +21,14 @@ ipcMain.on("CreateRequest", (ev, data) => {
   ev.reply("replyCreate", file);
 });
 
-ipcMain.handle("ReadRequest", async (event, data) => {
-  const result = fs.readFileSync(path.join(__dirname, "../DB/Save.json"), {
-    encoding: "utf8",
-    flag: "r",
-  });
+ipcMain.handle("ReadRequest", async () => {
+  const { canceled, result } = await fs.readFileSync(
+    path.join(__dirname, "../DB/Save.json"),
+    {
+      encoding: "utf8",
+      flag: "r",
+    }
+  );
   return result;
 });
 

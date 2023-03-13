@@ -23,10 +23,9 @@ function dbUpdate() {
   });
 }
 function dbRead() {
-  ipcRenderer.invoke("ReadRequest" /* ,data */).then((result) => {
-    return result;
-  });
+  ipcRenderer.invoke("ReadRequest");
 }
+
 function dbDelete() {
   ipcRenderer.send("DeleteRequest", data);
   ipcRenderer.on("replyDelete", () => {

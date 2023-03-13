@@ -2,4 +2,9 @@ console.log("algo");
 
 console.log(window.Bridge.dbCreate({ data: "some other data" }));
 
-console.log(window.Bridge.dbRead());
+async function read() {
+  const result = await window.Bridge.dbRead();
+  return result;
+}
+
+console.log(read());

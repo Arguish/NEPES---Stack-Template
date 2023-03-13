@@ -7,17 +7,33 @@ if (require("electron-squirrel-startup")) {
   app.quit();
 }
 
-ipcMain.on("canal1", (ev, data) => {
+ipcMain.on("CreateRequest", (ev, data) => {
   console.log(ev);
   console.log(data);
-  ev.reply("reply1", "response");
+  fs.writeFileSync(
+    path.join(__dirname, "../DB/Save.json"),
+    JSON.stringify(data)
+  );
+  let file = fs.readFileSync(path.join(__dirname, "../DB/Save.json"), {
+    encoding: "utf8",
+    flag: "r",
+  });
+  ev.reply("replyCreate", file);
+});
+
+ipcMain.handle("ReadRequest", async (event, data) => {
+  const result = fs.readFileSync(path.join(__dirname, "../DB/Save.json"), {
+    encoding: "utf8",
+    flag: "r",
+  });
+  return result;
 });
 
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 600,
+    height: 800,
     webPreferences: {
       nodeIntegration: true,
       preload: path.join(__dirname, "./ElectronPreload.js"),

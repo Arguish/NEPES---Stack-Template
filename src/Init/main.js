@@ -1,3 +1,5 @@
 console.log("algo");
 
-window.Bridge.beLog();
+console.log(window.Bridge.dbCreate({ data: "some other data" }));
+
+console.log(window.Bridge.dbRead());

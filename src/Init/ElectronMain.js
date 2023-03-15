@@ -35,8 +35,8 @@ ipcMain.handle("ReadRequest", async () => {
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 600,
-    height: 800,
+    width: 200 * 2,
+    height: 320 * 2,
     webPreferences: {
       nodeIntegration: true,
       preload: path.join(__dirname, "./ElectronPreload.js"),

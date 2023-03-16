@@ -22,8 +22,12 @@ function dbUpdate() {
     console.log("datos actualizados");
   });
 }
-function dbRead() {
-  ipcRenderer.invoke("ReadRequest");
+function dbRead(data) {
+  ipcRenderer.send("ReadRequest", data);
+  ipcRenderer.on("replyRead", (a) => {
+    console.log(a);
+    return a;
+  });
 }
 
 function dbDelete() {

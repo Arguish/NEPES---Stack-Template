@@ -8,8 +8,6 @@ if (require("electron-squirrel-startup")) {
 }
 
 ipcMain.on("CreateRequest", (ev, data) => {
-  console.log(ev);
-  console.log(data);
   fs.writeFileSync(
     path.join(__dirname, "../DB/Save.json"),
     JSON.stringify(data)
@@ -21,15 +19,16 @@ ipcMain.on("CreateRequest", (ev, data) => {
   ev.reply("replyCreate", file);
 });
 
-ipcMain.handle("ReadRequest", async () => {
-  const { canceled, result } = await fs.readFileSync(
+ipcMain.on("ReadRequest", (ev, data) => {
+  const result = fs.readFile(
     path.join(__dirname, "../DB/Save.json"),
-    {
-      encoding: "utf8",
-      flag: "r",
+    (err, data) => {
+      //console.log(data);
+      return data;
     }
   );
-  return result;
+  console.log("----", result);
+  ev.reply("replyRead", result);
 });
 
 const createWindow = () => {

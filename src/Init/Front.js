@@ -1,5 +1,13 @@
-window.Bridge.dbCreate({ data: "some other data" }).then((a) => console.log(a));
+async function POST(data) {
+  let result = await window.Bridge.dbCreate(data);
+  return result;
+}
 
-window.Bridge.dbRead("algo")
-  .then((a) => console.log(a))
-  .catch((a) => console.log(a));
+async function GET(data) {
+  let result = await window.Bridge.dbRead(data);
+  return result;
+}
+
+console.log(POST({ data: "some other data" }));
+
+console.log(GET("algo"));

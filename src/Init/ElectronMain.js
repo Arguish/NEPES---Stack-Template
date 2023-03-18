@@ -7,15 +7,12 @@ if (require("electron-squirrel-startup")) {
   app.quit();
 }
 
-ipcMain.on("CreateRequest", (ev, data) => {
+ipcMain.on("CreateRequest", (ev, docname, data) => {
   fs.writeFileSync(
-    path.join(__dirname, "../DB/Save.json"),
+    path.join(__dirname, `../DB/${docname}`),
     JSON.stringify(data)
   );
-  let file = fs.readFileSync(path.join(__dirname, "../DB/Save.json"), {
-    encoding: "utf8",
-    flag: "r",
-  });
+  let file = fs.readFileSync(path.join(__dirname, `../DB/${docname}`));
   ev.reply("replyCreate", file);
 });
 

@@ -19,18 +19,6 @@ ipcMain.on("CreateRequest", (ev, data) => {
   ev.reply("replyCreate", file);
 });
 
-ipcMain.on("ReadRequest", (ev, data) => {
-  const result = fs.readFile(
-    path.join(__dirname, "../DB/Save.json"),
-    (err, data) => {
-      //console.log(data);
-      return data;
-    }
-  );
-  console.log("----", result);
-  ev.reply("replyRead", result);
-});
-
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({

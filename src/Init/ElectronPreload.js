@@ -12,36 +12,15 @@ function saveData(channel, data, response = false, cresponse) {
 
 function dbCreate(data) {
   ipcRenderer.send("CreateRequest", data);
-  ipcRenderer.on("replyCreate", () => {
+  ipcRenderer.on("replyCreate", (ev, data2) => {
     console.log("datos creados");
-  });
-}
-function dbUpdate() {
-  ipcRenderer.send("UpdateRequest", data);
-  ipcRenderer.on("replyUpdate", () => {
-    console.log("datos actualizados");
-  });
-}
-function dbRead(data) {
-  ipcRenderer.send("ReadRequest", data);
-  ipcRenderer.on("replyRead", (a) => {
-    console.log(a);
-    return a;
-  });
-}
-
-function dbDelete() {
-  ipcRenderer.send("DeleteRequest", data);
-  ipcRenderer.on("replyDelete", () => {
-    console.log("datos borrados");
+    console.log(data2);
+    return data2;
   });
 }
 
 let bridge = {
   dbCreate,
-  dbUpdate,
-  dbRead,
-  dbDelete,
 };
 
 contextBridge.exposeInMainWorld("Bridge", bridge);

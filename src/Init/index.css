@@ -8,3 +8,7 @@ body {
   color: antiquewhite;
   text-align: center;
 }
+
+.hide {
+  display: none;
+}

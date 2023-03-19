@@ -9,6 +9,16 @@ body {
   text-align: center;
 }
 
+.publi {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.show {
+  width: 90vw;
+}
+
 .hide {
   display: none;
 }

@@ -2,17 +2,20 @@
 // https://www.electronjs.org/docs/latest/tutorial/process-model#preload-scripts
 const { contextBridge, ipcMain, ipcRenderer } = require("electron");
 
-function docCreate(docname, data) {
-  ipcRenderer.send("CreateRequest", docname, data);
-  return ipcRenderer.on("replyCreate", (ev, data2) => {
-    console.log("datos creados");
-    console.log(data2);
-    return data2;
+function sql() {
+  document.addEventListener("DOMContentLoaded", function () {
+    ipcRenderer.send("mainWindowLoaded");
+    ipcRenderer.on("resultSent", function (evt, result) {
+      let resultEl = document.getElementById("result");
+      console.log(result);
+      for (var i = 0; i < result.length; i++) {
+        resultEl.innerHTML +=
+          "First Name: " + result[i].FirstName.toString() + "<br/>";
+      }
+    });
   });
 }
 
-let bridge = {
-  docCreate,
-};
+let bridge = { sql };
 
 contextBridge.exposeInMainWorld("Bridge", bridge);

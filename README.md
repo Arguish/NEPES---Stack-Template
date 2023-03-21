@@ -7,6 +7,7 @@
 ![](https://logo.clearbit.com/nodejs.org)
 ![](https://logo.clearbit.com/electronjs.org)
 ![](https://sqlite.org/images/sqlite370_banner.gif)
+![](https://knexjs.org/knex-logo.png)
 
 ---
 

@@ -1,8 +1,4 @@
-console.log("front ONLINE");
-
 let publisher = document.querySelectorAll("#publisher");
-
-console.log(publisher);
 
 function loopPublishers(array) {
   let exit = 0;

@@ -1,2 +1,2 @@
 console.log("js ONLINE");
-window.Bridge.sql();
+window.Bridge.pinpon();

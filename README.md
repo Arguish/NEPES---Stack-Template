@@ -8,8 +8,7 @@
 
 ### Core
 
-<img src="https://victorroblesweb.es/wp-content/uploads/2018/01/nodejs-victorroblesweb.png" width="25%">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/800px-Electron_Software_Framework_Logo.svg.png" width="25%">
+<img src="https://victorroblesweb.es/wp-content/uploads/2018/01/nodejs-victorroblesweb.png" width="25%"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/800px-Electron_Software_Framework_Logo.svg.png" width="25%">
 
 ### Frontend
 
@@ -17,9 +16,7 @@
 
 ### Backend
 
-<img src="https://logo.clearbit.com/expressjs.org" width="25%">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Sqlite-square-icon.svg/2048px-Sqlite-square-icon.svg.png" width="25%">
-<img src="https://logo.clearbit.com/sequelize.org" width="25%">
+<img src="https://logo.clearbit.com/expressjs.org" width="25%"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Sqlite-square-icon.svg/2048px-Sqlite-square-icon.svg.png" width="25%"><img src="https://logo.clearbit.com/sequelize.org" width="25%">
 
 ---
 

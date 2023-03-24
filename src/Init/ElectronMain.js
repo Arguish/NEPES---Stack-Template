@@ -1,13 +1,6 @@
 const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
 const fs = require("fs");
-const knex = require("knex")({
-  client: "sqlite3",
-  conection: {
-    filename: "../DB/DB.db",
-  },
-  useNullAsDefault: true,
-});
 
 if (require("electron-squirrel-startup")) {
   app.quit();

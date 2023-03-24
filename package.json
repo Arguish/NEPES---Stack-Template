@@ -19,10 +19,9 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@picocss/pico": "^1.5.7",
     "electron-rebuild": "^3.2.9",
-    "electron-squirrel-startup": "^1.0.0",
-    "knex": "^2.4.2",
-    "sqlite3": "^5.1.6"
+    "electron-squirrel-startup": "^1.0.0"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.5",

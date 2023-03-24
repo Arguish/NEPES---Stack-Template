@@ -1,16 +1,25 @@
-# NES---Stack-Template
+# NEPES Stack-Template
+
+<img src="./Screenshot_4.png" width="25%">
 
 ## Tecnologias empleadas:
 
 ---
 
-![](https://logo.clearbit.com/nodejs.org)
-![](https://logo.clearbit.com/electronjs.org)
-![](https://sqlite.org/images/sqlite370_banner.gif)
+### Core
 
-¿![](https://logo.clearbit.com/expressjs.org)?
+<img src="https://victorroblesweb.es/wp-content/uploads/2018/01/nodejs-victorroblesweb.png" width="25%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/800px-Electron_Software_Framework_Logo.svg.png" width="25%">
 
-¿![](https://knexjs.org/knex-logo.png)?
+### Frontend
+
+<img src="https://picocss.com/img/schema.jpg" width="25%">
+
+### Backend
+
+<img src="https://logo.clearbit.com/expressjs.org" width="25%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Sqlite-square-icon.svg/2048px-Sqlite-square-icon.svg.png" width="25%">
+<img src="https://logo.clearbit.com/sequelize.org" width="25%">
 
 ---
 
